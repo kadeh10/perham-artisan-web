@@ -60,8 +60,8 @@ function Index() {
         <section id="projects" className="pt-40 pb-20 px-8 lg:px-16">
           <div className="max-w-[1400px] mx-auto">
             <div className="grid grid-cols-12 gap-6 items-end mb-24">
-              <div className="col-span-12 lg:col-span-8">
-                <h1 className="text-[clamp(3rem,8vw,7rem)] font-syncopate font-bold leading-[0.9] tracking-tighter mb-8">
+              <div className="col-span-12 lg:col-span-8 overflow-hidden">
+                <h1 className="text-[clamp(3rem,7vw,6rem)] font-syncopate font-bold leading-[0.9] tracking-tighter mb-8">
                   ENGINEERING <br />
                   <span className="text-electric">DIGITAL</span> <br />
                   COMPLEXITY.
