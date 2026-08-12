@@ -54,6 +54,7 @@
   --color-surface: var(--surface);
   --font-syncopate: var(--font-syncopate);
   --font-space: var(--font-space);
+  --font-mono-tech: var(--font-mono-tech);
 }
 
 :root {
