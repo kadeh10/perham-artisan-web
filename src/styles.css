@@ -100,6 +100,7 @@
   --surface: #ffffff;
   --font-syncopate: "Syncopate", sans-serif;
   --font-space: "Space Grotesk", sans-serif;
+  --font-mono-tech: "JetBrains Mono", ui-monospace, monospace;
 }
 
 @layer base {
