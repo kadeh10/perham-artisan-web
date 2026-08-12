@@ -54,6 +54,7 @@
   --color-surface: var(--surface);
   --font-syncopate: var(--font-syncopate);
   --font-space: var(--font-space);
+  --font-mono-tech: var(--font-mono-tech);
 }
 
 :root {
@@ -99,6 +100,7 @@
   --surface: #ffffff;
   --font-syncopate: "Syncopate", sans-serif;
   --font-space: "Space Grotesk", sans-serif;
+  --font-mono-tech: "JetBrains Mono", ui-monospace, monospace;
 }
 
 @layer base {
@@ -111,3 +113,85 @@
     color: var(--color-foreground);
   }
 }
+
+@utility blueprint {
+  background-image:
+    linear-gradient(
+      to right,
+      color-mix(in oklab, var(--ink) 6%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--ink) 6%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 48px 48px;
+}
+
+@utility blueprint-invert {
+  background-image:
+    linear-gradient(
+      to right,
+      color-mix(in oklab, var(--canvas) 8%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--canvas) 8%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 48px 48px;
+}
+
+@utility hatch {
+  background-image: repeating-linear-gradient(
+    45deg,
+    color-mix(in oklab, var(--ink) 10%, transparent) 0px,
+    color-mix(in oklab, var(--ink) 10%, transparent) 1px,
+    transparent 1px,
+    transparent 7px
+  );
+}
+
+@utility scanlines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    color-mix(in oklab, var(--electric) 12%, transparent) 0px,
+    color-mix(in oklab, var(--electric) 12%, transparent) 1px,
+    transparent 1px,
+    transparent 5px
+  );
+}
+
+@keyframes marquee-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility animate-marquee {
+  animation: marquee-x 28s linear infinite;
+}
+
+@utility animate-marquee-fast {
+  animation: marquee-x 14s linear infinite;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.15;
+  }
+}
+
+@utility animate-pulse-dot {
+  animation: pulse-dot 1.6s ease-in-out infinite;
+}
+
